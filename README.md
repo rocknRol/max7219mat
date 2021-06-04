@@ -117,9 +117,8 @@ The graphics library "libmax7219mat" allows you to manage the display hardware a
 Following all functions exposed from library:
 
 - **int initialize_library(void);**
-
-  *Desc: initialize display hardware
-  Param: none*
+--  *Desc: initialize display hardware*
+--  *Param: none*
   *Ret:*
   	*0: ok*
   	*-1: error status*
