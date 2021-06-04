@@ -124,9 +124,9 @@ Following all functions exposed from library:
   
   *Ret:*
   	
-     *0: ok*
-     
-     *-1: error status*
+	*0: ok*
+
+	*-1: error status*
 
 
 - **int selftest_display(void);**
