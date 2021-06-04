@@ -77,6 +77,34 @@ The DTB is loaded on boot time.
 
 Follow an extract from DTS file:
 
+```
+&gpio {
+    ....
+    ....
+    ....
+
+	max7219mat_pins: max7219mat_pins {
+		brcm,pins = <21 22 23 24 25 26 27>; /* GPIO numbers */
+		brcm,function = <1>;	/* output */
+		brcm,pull = <1 1 1 1 1 1 1>;	/* pull up */
+	};
+};
+
+&soc {
+    ....
+    ....
+    ....
+
+	max7219mat {
+		compatible = "rocknrol,max7219mat";
+		label = "max7219mat";
+		pinctrl-0 = <&max7219mat_pins>;
+	};
+};
+```
+
+The driver generate all signals needed to MAX7219. This signals are shown in the following Timing Diagram (extraxted from MAXIM MAX7219 Datasheet):
+
 
 
 
