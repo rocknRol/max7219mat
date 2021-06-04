@@ -118,11 +118,11 @@ Following all functions exposed from library:
 
 - **int initialize_library(void);**
 
-  *Desc: initialize display hardware*
-  *Param: none*
+  *Desc: initialize display hardware
+  Param: none*
   *Ret:*
   	*0: ok*
-  	*-1: error status* 
+  	*-1: error status*
 
 
 - **int selftest_display(void);**
