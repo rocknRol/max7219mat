@@ -49,14 +49,35 @@ The voltage level conversion is build around at Mosfet 2N7000 and it is also bi-
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/sch1.png)
 
-Below is the interface "Raspberry PI to Display" circuit diagram that you can see better in the xxx available on file repository
-
+Below is the interface "Raspberry PI to Display" circuit diagram that you can see better in KiCad file available in this repository
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/sch2.png)
 
 In the pictures below You can see the prototype on breadboards:
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/prt1.png)
+
+and finally the display is assembled on prototype PCB board. I have left a little free space for future developments.
+
+
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/prt3.png)
+
+
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/prt2.png)
+
+
+## Platform driver and DTS
+
+Our hardware is directly connected at the Raspberry PI GPI and cannot recognized from system. On the other hand the Raspberry PI no mode to discoverable it and it is not enumerable. So this hardware is a platform device.
+The solution is use Device Tree technique. 
+Indeed the primary purpose of Device Tree in Linux is to provide a way to describe to the system a non-discoverable hardware.
+
+In the Device Tree Source (DTS) file we describe hardware and next we compile it to obtain a Device Tree Binary (DTB) file.
+The DTB is loaded on boot time.
+
+Follow an extract from DTS file:
+
+
 
 
 
