@@ -127,14 +127,14 @@ Following all functions exposed from library:
 
 - **int selftest_display(void);**
 	
-  *Desc: execute the self-test on display*
+  - *Desc: execute the self-test on display*
 	
-  *Param: none*
+  - *Param: none*
 	
-  *Ret: "0: ok"; "-1: error status"*
+  - *Ret: "0: ok"; "-1: error status"*
   
   
-  - **int check_display_module(int module, int toggle_on_off);**
+- **int check_display_module(int module, int toggle_on_off);**
 
   *Desc: execute the test on a single display module*
   
