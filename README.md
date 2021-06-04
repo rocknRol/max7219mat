@@ -16,7 +16,7 @@ Each module is managed of Maxim 7219 chip.
 
 This is a simple module with which I have started my experiments:
 
-![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/res/matrix1.png)
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/matrix1.png)
 
 But to build a bigger display I have decided to use a line with four modules like this:
 
