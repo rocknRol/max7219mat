@@ -117,15 +117,11 @@ The graphics library "libmax7219mat" allows you to manage the display hardware a
 Following all functions exposed from library:
 
 - **int initialize_library(void);**
-
   - *Desc: initialize display hardware*
-
   - *Param: none*
-  
   - *Ret:*
     - *0: ok*
     - *-1: error status*
-
 
 - **int selftest_display(void);**
   - *Desc: execute the self-test on display*
@@ -133,14 +129,39 @@ Following all functions exposed from library:
   - *Ret:*
     - *0: ok*
     - *-1: error status*
-
   
 - **int check_display_module(int module, int toggle_on_off);**
   - *Desc: execute the test on a single display module*
-  - *Param:* *
+  - *Param:*
     - *module: number of module (1 - 16)*
     - *toggle_on_off: not 0: module on; 0: module off*
   - *Ret:*
     - *0: ok*
     - *-1: error status*
   
+- **int set_brightness(int brightness, int module);**
+  - *Desc: set brightness on a single display module*
+  - *Param:*
+    - *brightness: number of module (1 - 15)*
+    - *module: number of module (1 - 16)*
+  - *Ret:*
+    - *0: ok*
+    - *-1: error status*
+
+- **int render_line(int module, int line);**
+  - *Desc: draw a single vertical line module*
+  - *Param:*
+    - *module: number of module (1 - 16)*
+    - *line: number of line (0 - 7)*
+  - *Ret:*
+    - *0: ok*
+    - *-1: error status*
+ 
+- **int render_module(int module);**
+  - *Desc: draw the selected module*
+  - *Param:*
+    - *module: number of module (1 - 16)*
+  - *Ret:*
+    - *0: ok*
+    - *-1: error status*		
+		
