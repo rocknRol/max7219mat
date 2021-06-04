@@ -123,24 +123,24 @@ Following all functions exposed from library:
   - *Param: none*
   
   - *Ret:*
-    - *0: ok;*
+    - *0: ok*
     - *-1: error status*
 
 
 - **int selftest_display(void);**
-	
   - *Desc: execute the self-test on display*
-	
   - *Param: none*
-	
-  - *Ret: "0: ok"; "-1: error status"*
-  
+  - *Ret:*
+    - *0: ok*
+    - *-1: error status*
+
   
 - **int check_display_module(int module, int toggle_on_off);**
-
-  *Desc: execute the test on a single display module*
-  
-  *Param: "module: number of module (1 - 16)"; "toggle_on_off: not 0: module on; 0: module off"*
-  
-  *Ret: "0: ok"; "-1: error status"*
+  - *Desc: execute the test on a single display module*
+  - *Param:* *
+    - *module: number of module (1 - 16)*
+    - *toggle_on_off: not 0: module on; 0: module off*
+  - *Ret:*
+    - *0: ok*
+    - *-1: error status*
   
