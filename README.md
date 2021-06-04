@@ -125,15 +125,23 @@ Following all functions exposed from library:
   *Ret:*
   	
      *0: ok*
+     
      *-1: error status*
 
 
 - **int selftest_display(void);**
-	*Desc: execute the self-test on display*
-	*Param: none*
-	*Ret:* 
-		*0: ok*
-		*-1: error status* 
+	
+  *Desc: execute the self-test on display*
+	
+  *Param: none*
+	
+  *Ret:* 
+		
+      *0: ok*
+      
+      *-1: error status* 
+
+
 
 
 
