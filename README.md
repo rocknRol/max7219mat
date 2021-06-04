@@ -47,4 +47,17 @@ Now to connect the display to the Raspberry PI I designed an interface with the 
 I used the MC74HC154N a 4-line to 16-line decoder/demultiplexer to send data at correct module 8x8 . Like the MAXIM7219 also for this chip the supply voltage is 5V because it's from the TTL family.
 The voltage level conversion is build around at Mosfet 2N7000 and it is also bi-directional, but here is used only from 3.3V to 5V
 
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/sch1.png)
+
+Below is the interface "Raspberry PI to Display" circuit diagram that you can see better in the xxx available on file repository
+
+
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/sch2.png)
+
+In the pictures below You can see the prototype on breadboards:
+
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/prt1.png)
+
+
+
 
