@@ -110,7 +110,7 @@ The driver generates all signals needed to MAX7219. This signals are shown in th
 In userland the software can use this "ioctl" to select the module from 1 to 16 and "write" function to send data.
 
 
-## Graphics library in C language
+## Graphic library in C language
 
 The graphics library "libmax7219mat" allows you to manage the display hardware and turning pixels on/off.
 
