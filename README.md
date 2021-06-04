@@ -122,11 +122,7 @@ Following all functions exposed from library:
 
   *Param: none*
   
-  *Ret:*
-  	
-	*0: ok*
-
-	*-1: error status*
+  *Ret: 0: ok; -1: error status*
 
 
 - **int selftest_display(void);**
@@ -135,16 +131,7 @@ Following all functions exposed from library:
 	
   *Param: none*
 	
-  *Ret:* 
-		
-      *0: ok*
-      
-      *-1: error status* 
-
-
-
-
-
-
-
-
+  *Ret: 0: ok; -1: error status*
+  
+  
+  
