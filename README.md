@@ -103,7 +103,33 @@ Follow an extract from DTS file:
 };
 ```
 
-The driver generate all signals needed to MAX7219. This signals are shown in the following Timing Diagram (extraxted from MAXIM MAX7219 Datasheet):
+The driver generates all signals needed to MAX7219. This signals are shown in the following Timing Diagram (extraxted from MAXIM MAX7219 Datasheet):
+
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/dgr1.png)
+
+In userland the software can use this "ioctl" to select the module from 1 to 16 and "write" function to send data.
+
+
+## Graphics library in C language
+
+The graphics library "libmax7219mat" allows you to manage the display hardware and turning pixels on/off.
+
+Following all functions exposed from library:
+
+- **int initialize_library(void);**
+	*Desc: initialize display hardware*
+	*Param: none*
+	*Ret:* 
+		*0: ok*
+		*-1: error status* 
+
+
+- **int selftest_display(void);**
+	*Desc: execute the self-test on display*
+	*Param: none*
+	*Ret:* 
+		*0: ok*
+		*-1: error status* 
 
 
 
