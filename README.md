@@ -69,6 +69,7 @@ and finally the display is assembled on prototype PCB board. I have left a littl
 ## Platform driver and DTS
 
 Our hardware is directly connected at the Raspberry PI GPI and cannot be recognized by the system. On the other hand the Raspberry PI has no way to discoverable it. So this hardware is exactly a platform device.
+
 The solution is to use the Device Tree technique.
 Indeed the primary purpose of Device Tree in Linux is to provide a way to describe to the system a non-discoverable hardware.
 
