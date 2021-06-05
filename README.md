@@ -231,4 +231,12 @@ Following all functions exposed from library:
     - *0: ok*
     - *-1: error status*
 
+## Cython wrapper
+
+Using Cython programming language the C library is been ported on Python.
+To use it you must include the module like following:
+
+`import pymax7219lib`
+
+Following all functions available for Python developers:
 
