@@ -135,7 +135,9 @@ Following all functions exposed from library:
   - *Desc: execute the test on a single display module*
   - *Param:*
     - *module: number of module (1 - 16)*
-    - *toggle_on_off: not 0: module on; 0: module off*
+    - *toggle_on_off: 
+      - not 0: module on; 
+      - 0: module off*
   - *Ret:*
     - *0: ok*
     - *-1: error status*
