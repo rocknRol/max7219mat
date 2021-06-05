@@ -104,7 +104,7 @@ Follow an extract from DTS file:
 };
 ```
 
-The driver generates all signals needed to MAX7219. This signals are shown in the following Timing Diagram (extraxted from MAXIM MAX7219 Datasheet):
+The driver generates all signals needed to the chip MAX7219. This signals are shown in the following Timing Diagram (extraxted from MAXIM MAX7219 Datasheet):
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/dgr1.png)
 
