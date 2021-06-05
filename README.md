@@ -108,7 +108,7 @@ The driver generates all signals needed to the chip MAX7219. This signals are sh
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/dgr1.png)
 
-In userland the software can use this "ioctl" to select the module from 1 to 16 and "write" function to send data.
+In userland the software can to use the system call "ioctl" to select the module chosen (from 1 to 16) and to use the system call "write" to send datas that will be drawn.
 
 
 ## Graphic library in C language
