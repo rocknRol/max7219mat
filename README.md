@@ -234,9 +234,36 @@ Following all functions exposed from library:
 ## Cython wrapper
 
 Using Cython programming language the C library is been ported on Python.
+
 To use it you must include the module like following:
 
 `import pymax7219lib`
 
 Following all functions available for Python developers:
+
+- **initializeLibrary()**
+
+- **selftestDisplay()**
+
+- **checkDisplayModule(module, toggle_on_off)**
+
+- **setBrightness(brightness, module)**
+
+- **renderLine(module, line)**
+
+- **renderModule(module)**
+
+- **renderScreen()**
+
+- **autoRenderEnable(value)**
+
+- **screenClippingEnable(value)**
+
+- **setPixel(x, y, value)**
+
+- **getPixel(x, y)**
+
+- **clearScreen()**
+
+- **quitLibrary()**
 
