@@ -1,8 +1,8 @@
-# Matrix display 32x32 pixel based on Maxim 7219 chip controller and Linux platform driver for Raspberry PI
+# Matrix display 32x32 pixel based on Maxim 7219 chip controller and Linux platform driver for Raspberry Pi
 
 
 This project was born with an educational intent, because I have used it to learn how to write an platform driver with DTS for Linux embedded system.
-In the follow we will see how to use Raspberry PI 3B to drive a 32x32 led matrix display. 
+In the follow we will see how to use Raspberry Pi 3B to drive a 32x32 led matrix display. 
 We will starting from design electronic circuit until to develop animations in Python...
 
 "max7219mat" is composed by: the electronic board, a platform device driver, a minimal library in C language and a Cython wrapper to making callable the C library from Python code.
@@ -24,7 +24,7 @@ But to build a bigger display I have decided to use a line with four modules lik
 
 Unfortunately this product is made to work like a simple scrolling text viewer. 
 Technically it works like a big scrolling register where the bits go through from one chip Maxim 7219 to the other adjacent.
-On Internet you can find thousands projects to do this with Arduino or Raspberry using dedicated libraries.
+On Internet you can find thousands projects to do this with Arduino or Raspberry Pi using dedicated libraries.
 
 However to form a decent display I used four lines, but to drive every display 8x8 individually I have decided to hack them.
 The modification consists in interrupting the connection Data I/O and chip selection CS signal between the various Maxim 7219 chips.
@@ -39,17 +39,17 @@ So I assembled everything and connected the cables:
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/matrix6.png)
 
-Now to connect the display to the Raspberry PI I designed an interface with the following  two requirements:
+Now to connect the display to the Raspberry Pi I designed an interface with the following  two requirements:
 
 - To implement a mechanism to select the correct module 8x8 to send the data
-- To interface in safe the level signals of Raspberry PI at 3.3V with the 5V level of display
+- To interface in safe the level signals of Raspberry Pi at 3.3V with the 5V level of display
 
 I used the MC74HC154N a 4-line to 16-line decoder/demultiplexer to send data at correct module 8x8 . Like the MAXIM7219 also for this chip the supply voltage is 5V because it's from the TTL family.
 The voltage level conversion is build around at Mosfet 2N7000 and it is also bi-directional, but here is used only from 3.3V to 5V
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/sch1.png)
 
-Below is the interface "Raspberry PI to Display" circuit diagram that you can see better in KiCad file available in this repository
+Below is the interface "Raspberry Pi to Display" circuit diagram that you can see better in KiCad file available in this repository
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/sch2.png)
 
@@ -68,7 +68,7 @@ and finally the display is assembled on prototype PCB board. I have left a littl
 
 ## Platform driver and DTS
 
-Our hardware is directly connected at the Raspberry PI GPI and cannot be recognized by the system. On the other hand the Raspberry PI has no way to discoverable it. So this hardware is exactly a platform device.
+Our hardware is directly connected at the Raspberry Pi GPI and cannot be recognized by the system. On the other hand the Raspberry Pi has no way to discoverable it. So this hardware is exactly a platform device.
 
 The solution is to use the Device Tree technique.
 Indeed the primary purpose of Device Tree in Linux is to provide a way to describe to the system a non-discoverable hardware.
@@ -108,7 +108,7 @@ The driver generates all signals needed to the chip MAX7219. This signals are sh
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/dgr1.png)
 
-In userland the software can to use the system call "ioctl" to select the module chosen (from 1 to 16) and to use the system call "write" to send datas that will be drawn.
+In userland the software can to use the system call "ioctl" to select the module chosen (from 1 to 16) and to use the system call "write" to send data that will be drawn.
 
 
 ## Graphic library in C language
