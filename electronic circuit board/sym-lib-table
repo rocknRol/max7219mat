@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name max7219mat_board-rescue)(type Legacy)(uri ${KIPRJMOD}/max7219mat_board-rescue.lib)(options "")(descr ""))
+)
