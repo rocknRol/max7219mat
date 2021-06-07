@@ -3,16 +3,16 @@
 
 This project was born with an educational intent, because I have used it to learn how to write an platform driver with DTS for Linux embedded system.
 In the follow we will see how to use Raspberry Pi 3B to drive a 32x32 led matrix display. 
-We will starting from design electronic circuit until to develop animations in Python...
+We will starting from design of electronic circuit until to develop animations in Python...
 
-"max7219mat" is composed by: the electronic board, a platform device driver, a minimal library in C language and a Cython wrapper to making callable the C library from Python code.
+"max7219mat" is composed by: the electronic board, a platform device driver, a minimal library in C language and a Cython wrapper to making callable the C library functions from Python code.
 
 Now I describe first the electronic board and after the device driver for Linux.
 
 ## Electronic board and display
 
 The display board is made up of 16 modules types 8x8 matrix led. 
-Each module is managed of Maxim 7219 chip.
+Each module is managed by a Maxim 7219 chip.
 
 This is a simple module with which I have started my experiments:
 
@@ -26,8 +26,8 @@ Unfortunately this product is made to work like a simple scrolling text viewer.
 Technically it works like a big scrolling register where the bits go through from one chip Maxim 7219 to the other adjacent.
 On Internet you can find thousands projects to do this with Arduino or Raspberry Pi using dedicated libraries.
 
-However to form a decent display I used four lines, but to drive every display 8x8 individually I have decided to hack them.
-The modification consists in interrupting the connection Data I/O and chip selection CS signal between the various Maxim 7219 chips.
+However to build a decent display I decided to use  four lines, but to drive every display 8x8 individually I had to hack them.
+The modification consists in interrupting the connection of two signals:  Data I/O and chip selection CS between the various Maxim 7219 chips.
 
 ![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/matrix3.png)
 
