@@ -267,7 +267,8 @@ Following all functions available for Python developers:
 
 - **quitLibrary()**
 
-In the folder where the file "pymax7219lib.cpython-37m-arm-linux-gnueabihf.so" is present You can launch **python3** and import the module **pymax7219lib**
+In the folder where the file "pymax7219lib.cpython-37m-arm-linux-gnueabihf.so" is present You can launch **python3** and import the module **pymax7219lib**.
+
 For example You can execute the selftest:
 
 ```
