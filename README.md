@@ -267,7 +267,7 @@ Following all functions available for Python developers:
 
 - **quitLibrary()**
 
-In the folder where the file "pymax7219lib.cpython-37m-arm-linux-gnueabihf.so" is present You can execute **python3** and import the module **pymax7219lib**
+In the folder where the file "pymax7219lib.cpython-37m-arm-linux-gnueabihf.so" is present You can launch **python3** and import the module **pymax7219lib**
 For example You can execute the selftest:
 
 ```
@@ -283,3 +283,5 @@ To show all function in python shell:
 >>> import pymax7219lib
 >>> help(pymax7219lib);
 ```
+
+The shared dynamic library "pymax7219lib.cpython-37m-arm-linux-gnueabihf.so" can be copied (using root permission) in the folder "/usr/lib/python3/dist-packages/" to permit at python of make it visible in any directory.
