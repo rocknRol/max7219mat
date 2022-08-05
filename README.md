@@ -3,7 +3,7 @@
 
 This project was born with an educational intent, because I have used it to learn how to write an platform driver with DTS for Linux embedded system.
 In the follow we will see how to use Raspberry Pi 3B to drive a 32x32 led matrix display. 
-We will starting from design of electronic circuit until to develop animations in Python...
+We will starting from design of electronic circuit until to develop snake game in Python...
 
 "max7219mat" is composed by: the electronic board, a platform device driver, a minimal library in C language and a Cython wrapper to making callable the C library functions from Python code.
 
@@ -286,3 +286,11 @@ To show all function in python shell:
 ```
 
 The shared dynamic library "pymax7219lib.cpython-37m-arm-linux-gnueabihf.so" can be copied (using root permission) in the folder "/usr/lib/python3/dist-packages/" to permit at python of make it visible in any directory.
+
+## Videogame Snake in Python
+
+Using the "pymax7219lib" library I developed a simple snake game in pure Python as you can see:
+
+![](https://raw.githubusercontent.com/rocknRol/max7219mat/master/img/snake.gif)
+
+
